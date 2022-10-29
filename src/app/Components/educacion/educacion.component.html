@@ -1,0 +1,35 @@
+<hr data-aos="zoom-in" id="target" />
+
+<h3 class="text-center" data-aos="zoom-in">Educación</h3>
+
+<hr data-aos="zoom-in" />
+
+<div class="card text-bg-dark mb-3" style="max-width: 540px;" data-aos="zoom-in-right">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="'assets/images/undav.png'" class="img-fluid rounded-start" alt="..." style="margin-top: 20px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Universidad Nacional de Avellaneda</h5>
+        <p class="card-text">Lic. en Gerencia de Empresas</p>
+        <p class="card-text"><small class="text-muted">2022 - (en progreso)</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let edu of datos" class="card text-bg-dark mb-3" style="max-width: 540px;" data-aos="zoom-in-right">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="'assets/images/undav.png'" class="img-fluid rounded-start" alt="..." style="margin-top: 20px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{edu.institucion}}</h5>
+        <p class="card-text">{{edu.titulo}}</p>
+        <p class="card-text"><small class="text-muted">{{edu.fechaIn}} - {{edu.fechaFin==0?"(En progreso)":edu.fechaFin}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
