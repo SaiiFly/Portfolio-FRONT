@@ -1,14 +1,15 @@
 <nav class="navbar navbar-expand-lg bg-black">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img [src]="'assets/images/APLogo-20-20.png'" alt="image" height="60px"></a>
+    <a class="navbar-brand" href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa"
+      target="_blank"><img [src]="'assets/images/APLogo-20-20.png'" alt="image" height="60px"></a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#"><img [src]="'assets/images/LogosInti.png'" alt="image"
-              height="52px"></a>
+          <a class="nav-link" aria-current="page" href="https://www.argentina.gob.ar/inti" target="_blank"><img
+              [src]="'assets/images/LogosInti.png'" alt="image" height="52px"></a>
         </li>
         <li class="nav-text yoprogramo">
-          <span>#YoProgramo</span>
+          <a href="https://twitter.com/hashtag/yoprogramo" target="_blank"><span>#YoProgramo</span></a>
         </li>
       </ul>
     </div>
@@ -76,11 +77,21 @@
  CREAR COMPONENTE
 -->
 
-<hr />
+<app-acerca-de></app-acerca-de>
 
-<h3 class="text-center">Educación</h3>
+<button id="scroll" (click)="scrollFunction()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chevron-down"
+    viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+  </svg>
+</button>
 
-<hr />
+<hr data-aos="zoom-in" id="target" />
+
+<h3 class="text-center" data-aos="zoom-in">Educación</h3>
+
+<hr data-aos="zoom-in" />
 
 <div data-aos="zoom-in-right" class="test">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ut purus nec sagittis. Vestibulum non rutrum
@@ -89,6 +100,13 @@
   leo, vel porta erat egestas eget. Sed porta enim eget interdum tincidunt. Nulla tincidunt vitae ligula hendrerit
   maximus.
 </div>
+
+<hr data-aos="zoom-in" />
+
+<h3 class="text-center" data-aos="zoom-in">Hard & Soft Skills</h3>
+
+<hr data-aos="zoom-in" />
+
 <div data-aos="zoom-in-right" class="test">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ut purus nec sagittis. Vestibulum non rutrum
   massa, condimentum tempor turpis. Vivamus congue libero nunc, ac rhoncus eros pulvinar id. Donec lacinia tellus a
@@ -96,6 +114,13 @@
   leo, vel porta erat egestas eget. Sed porta enim eget interdum tincidunt. Nulla tincidunt vitae ligula hendrerit
   maximus.
 </div>
+
+<hr />
+
+<h3 class="text-center" data-aos="zoom-in">Proyectos</h3>
+
+<hr />
+
 <div data-aos="zoom-in-left" class="test">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ut purus nec sagittis. Vestibulum non rutrum
   massa, condimentum tempor turpis. Vivamus congue libero nunc, ac rhoncus eros pulvinar id. Donec lacinia tellus a

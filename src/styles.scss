@@ -5,11 +5,19 @@
   box-sizing:border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #161616;
   color: white;
   background-image: url('assets/images/back.jpg');
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0% 20%;
+  font-family: JosefinSans;
 }
 
 @font-face {

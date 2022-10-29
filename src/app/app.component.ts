@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
+import animateScrollTo from 'animated-scroll-to';
+
 
 @Component({
   selector: 'app-root',
@@ -9,9 +11,13 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'portafolio';
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     AOS.init();
+  }
+
+  scrollFunction() {
+    animateScrollTo(document.getElementById('target')!);
   }
 }
