@@ -15,4 +15,8 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  callData() {
+    this.datos = [];
+  }
+
 }
