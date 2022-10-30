@@ -8,15 +8,33 @@ import { Estudio } from 'src/app/models/estudio';
 })
 export class EducacionComponent implements OnInit {
 
-  datos : Estudio[] = [];
+  datos: Estudio[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.callData();
   }
 
   callData() {
-    this.datos = [];
+    //this.datos = [];
+
+    this.datos.push(
+      new Estudio("Universidad Nacional de Avellaneda",
+        "Lic. en Gerencia de Empresas",
+        2022,
+        0,
+        "https://www.undav.edu.ar/landing/img/logo1.png"
+      )
+    );
+    this.datos.push(
+      new Estudio("Universidad Nacional de Avellaneda",
+        "Lic. en Gerencia de Empresas",
+        2022,
+        0,
+        "https://www.undav.edu.ar/landing/img/logo1.png"
+      )
+    );
   }
 
 }
