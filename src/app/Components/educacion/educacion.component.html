@@ -1,29 +1,10 @@
 <div class="titleH" data-aos="fade-right" id="target"><h3>Educación</h3></div>
 
-<!-- <hr data-aos="zoom-in" /> -->
-
-<!--
-<div class="card text-bg-dark mb-3" style="max-width: 540px;" data-aos="zoom-in-right">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img [src]="'assets/images/undav.png'" class="img-fluid rounded-start" alt="..." style="margin-top: 20px">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Universidad Nacional de Avellaneda</h5>
-        <p class="card-text">Lic. en Gerencia de Empresas</p>
-        <p class="card-text"><small class="text-muted">2022 - (en progreso)</small></p>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
 <div *ngFor="let edu of this.datos" class="card text-bg-dark mb-3" style="max-width: 540px;margin:auto" data-aos="zoom-in-left">
   <div class="row g-0">
     <div class="col-md-4">
       <!-- <img [src]="'assets/images/undav.png'" class="img-fluid rounded-start" alt="..." style="margin-top: 20px;filter: grayscale(100%)"> -->
-      <img src={{edu.imgLink}} class="img-fluid rounded-start" alt="..." style="margin-top: 20px;filter: grayscale(100%)">
+      <img src={{edu.imgLink}} class="img-fluid rounded-start imagen" alt="logo-institucion">
     </div>
     <div class="col-md-8">
       <div class="card-body">

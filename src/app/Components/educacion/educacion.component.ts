@@ -28,11 +28,11 @@ export class EducacionComponent implements OnInit {
       )
     );
     this.datos.push(
-      new Estudio("Universidad Nacional de Avellaneda",
-        "Lic. en Gerencia de Empresas",
-        2022,
-        0,
-        "https://www.undav.edu.ar/landing/img/logo1.png"
+      new Estudio("Inst. San Fco. Solano",
+        "Bachiller en Economía y Administración",
+        2019,
+        2013,
+        "https://iili.io/b7pBsf.jpg"
       )
     );
   }

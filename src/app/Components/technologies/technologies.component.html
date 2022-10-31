@@ -1,0 +1,52 @@
+<div class="titleH" data-aos="zoom-in" id="target">
+  <h3>Tecnologías</h3>
+</div>
+
+<!--
+<div data-aos="zoom-in-right" class="test">
+  <img *ngFor="let tech of this.data" src={{tech.imgLink}} alt="image">
+</div>
+
+<div style="width:100%;height:660px;background-color: aliceblue;">
+  <div *ngFor="let tech of this.data" class="responsive" data-aos="zoom-in-right">
+    <div class="gallery">
+      <img src={{tech.imgLink}} alt="image">
+      <div class="desc">{{tech.name}}</div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div *ngFor="let tech of this.data; index as i">
+    <div class="responsive col" data-aos="zoom-in-right">
+      <div class="gallery">
+        <img src={{tech.imgLink}} alt="image">
+        <div class="desc">{{tech.name}}</div>
+      </div>
+    </div>
+    <div class="w-100" *ngIf="i%5==0"></div>
+  </div>
+</div>
+
+
+
+<div class="grid-container">
+  <div class="responsive" data-aos="zoom-in-right" *ngFor="let tech of this.data">
+    <div class="gallery">
+      <img src={{tech.imgLink}} alt="image">
+      <div class="desc">{{tech.name}}</div>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="grid-container">
+  <div class="responsive" data-aos="zoom-in-right" *ngFor="let tech of this.data">
+    <div class="gallery">
+      <img src={{tech.imgLink}} alt="image">
+      <div class="overlay">
+        <div class="desc">{{tech.name}}</div>
+      </div>
+    </div>
+  </div>
+</div>

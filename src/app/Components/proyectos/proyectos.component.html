@@ -1,0 +1,32 @@
+<div class="titleH" data-aos="zoom-in" style="margin-top:40px"><h3>Proyectos</h3></div>
+
+<div data-aos="zoom-in-left" class="test text-center">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus ut purus nec sagittis. Vestibulum non rutrum
+  massa, condimentum tempor turpis. Vivamus congue libero nunc, ac rhoncus eros pulvinar id. Donec lacinia tellus a
+  felis lobortis, quis interdum augue tempus. Fusce semper bibendum dolor, vitae vehicula ex. Quisque suscipit lacinia
+  leo, vel porta erat egestas eget. Sed porta enim eget interdum tincidunt. Nulla tincidunt vitae ligula hendrerit
+  maximus.
+</div>
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" *ngFor="let pro of this.data; index as i" data-bs-target="#carouselExampleDark" [attr.aria-current]="true" 
+        [attr.data-bs-slide-to]="i" attr.aria-label="Slide {{i}}" [ngClass]="this.active[i]"></button>
+  </div>
+  <div class="carousel-inner">
+    <div *ngFor="let pro of this.data; index as i"  class="carousel-item" [ngClass]="this.active[i]" data-bs-interval="10000">
+      <img src={{pro.imgLink}} class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{pro.name}}</h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
