@@ -10,7 +10,7 @@ import { LoginUsuario } from '../models/login-usuario';
 export class AuthService {
 
   /* URL = environment.URL + 'auth/'; */
-  URL = "https://portflioback.herokuapp.com//auth/"
+  URL = "https://portflioback.herokuapp.com/auth/"
 
   constructor(private httpClient: HttpClient) { }
 
