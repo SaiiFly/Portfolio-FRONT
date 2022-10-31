@@ -57,3 +57,34 @@
   from { width: 0 }
   to { width: 100% }
 }
+
+@media only screen and (max-width: 1200px) {
+  #texto {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  #texto {
+    font-size: 6px;
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #contenedor {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .con {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,-30%);
+  }
+  #texto {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8px;
+  }
+}
