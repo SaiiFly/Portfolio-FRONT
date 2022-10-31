@@ -1,16 +1,16 @@
 export class Estudio {
     id?: number;
-    institucion: string;
-    titulo: string;
-    fechaIn: number;
-    fechaFin: number;
-    imgLink: string;
+    institucionE: string;
+    tituloE: string;
+    fechaInE: number;
+    fechaFinE: number;
+    imgLinkE: string;
 
     constructor(institucion: string, titulo: string, fechaIn: number, fechaFin: number, imgLink: string) {
-        this.institucion = institucion;
-        this.titulo = titulo;
-        this.fechaIn = fechaIn;
-        this.fechaFin = fechaFin;
-        this.imgLink = imgLink;
+        this.institucionE = institucion;
+        this.tituloE = titulo;
+        this.fechaInE = fechaIn;
+        this.fechaFinE = fechaFin;
+        this.imgLinkE = imgLink;
     }
 }

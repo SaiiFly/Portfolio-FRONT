@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/models/proyecto'
+import { ProyectosService } from 'src/app/services/proyectos.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -12,30 +14,48 @@ export class ProyectosComponent implements OnInit {
   data: Proyecto[] = [];
 
   activeDescription: string = "";
+  isLogged = false;
 
-
-  constructor() { }
+  constructor(private sProyectos: ProyectosService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.callData();
-    this.data.forEach((_, index)=>{
-      if(index==0) {
-        this.active.push("active");
-        console.log("active funciona " + index);
-        console.log(this.active);
-      } else {
-        this.active.push("");
-        console.log("funciona " + index);
-      }
-    })
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
   callData() {
-    this.data.push(
-      new Proyecto("Violin Sightreading Practice", "https://iili.io/bYH25B.png", "Proyecto"),
-      new Proyecto("Otro proyecto 1", "https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000", "Proyecto"),
-      new Proyecto("Otro proyecto 2", "https://c0.wallpaperflare.com/preview/986/182/524/brilliant-bokeh-gold-multi-color-thumbnail.jpg", "Proyecto")
-    );
+    this.sProyectos.lista().subscribe(datos => { 
+      this.data = datos;
+      
+      this.data.forEach((_, index)=>{
+        if(index==0) {
+          this.active.push("active");
+          console.log("active funciona " + index);
+          console.log(this.active);
+        } else {
+          this.active.push("");
+          console.log("funciona " + index);
+        }
+      })
+    });
+    
+  }
+
+  delete(id?: number){
+    if(id != undefined){
+      this.sProyectos.delete(id).subscribe({
+        next: (data) => {
+          this.callData();
+        }, 
+        error: (err) => {
+          alert("Error");
+        }
+      })
+    }
   }
 
 }

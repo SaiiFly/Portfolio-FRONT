@@ -1,10 +1,10 @@
 export class Tech {
   id?: number;
-  name: string;
+  nombre: string;
   imgLink: string;
 
   constructor(name: string, imgLink: string) {
-      this.name = name;
+      this.nombre = name;
       this.imgLink = imgLink;
   }
 }

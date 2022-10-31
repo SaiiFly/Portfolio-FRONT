@@ -69,3 +69,30 @@ body::before {
     transform:translate(-50%, -50%);
   }
 }
+
+#borrar {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 6px;
+  z-index: 5;
+}
+
+#editar {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 36px;
+  top: 0;
+  margin: 6px;
+  z-index: 5;
+}
+
+#add {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}

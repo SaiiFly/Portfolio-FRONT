@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Estudio } from 'src/app/models/estudio';
+import { EducacionService } from 'src/app/services/educacion.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-educacion',
@@ -9,32 +11,38 @@ import { Estudio } from 'src/app/models/estudio';
 export class EducacionComponent implements OnInit {
 
   datos: Estudio[] = [];
+  isLogged = false;
 
-  constructor() { }
+  constructor(private educacionS: EducacionService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.callData();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
   callData() {
-    //this.datos = [];
+    this.educacionS.lista().subscribe(
+      data =>{
+        this.datos = data;
+      }
+    )
+  }
 
-    this.datos.push(
-      new Estudio("Universidad Nacional de Avellaneda",
-        "Lic. en Gerencia de Empresas",
-        2022,
-        0,
-        "https://www.undav.edu.ar/landing/img/logo1.png"
-      )
-    );
-    this.datos.push(
-      new Estudio("Inst. San Fco. Solano",
-        "Bachiller en Economía y Administración",
-        2019,
-        2013,
-        "https://iili.io/b7pBsf.jpg"
-      )
-    );
+  delete(id?: number){
+    if( id != undefined){
+      this.educacionS.delete(id).subscribe({
+        next: (data) => {
+          this.callData();
+        }, 
+        error: (err) => {
+          alert("Error");
+        }
+      })
+    }
   }
 
 }
