@@ -45,7 +45,7 @@
   transform: translateY(5%);
 }
 
-.typewriter h2 {
+.typewriter {
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
@@ -64,13 +64,6 @@
   }
 }
 
-/* @media only screen and (max-width: 620px) {
-  #texto {
-    font-size: 6px;
-    width: 45%;
-  }
-} */
-
 @media only screen and (max-width: 760px) {
   #contenedor {
     display: grid;
@@ -80,11 +73,13 @@
     position: relative;
     left: 50%;
     transform: translate(-50%,-30%);
+    width: 80%;
   }
   #texto {
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 8px;
+    transform: translate(-50%, -25%);
+    font-size: 12px;
+    width: 80%;
   }
 }

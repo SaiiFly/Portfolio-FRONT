@@ -25,6 +25,7 @@ a {
   position: absolute;
   height: 360px;
   background-image: url(https://mailthis.to/images/city.svg);
+  bottom: 0;
 }
 
 img {
@@ -100,5 +101,24 @@ img {
 @media only screen and (max-width: 1200px) {
   #contact {
     grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #contact {
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+  #svgImg {
+    display: none;
+  }
+  #mail {
+    font-size: 10px;
+  }
+  .frame {
+    width: 160px;
+  }
+  .footer {
+    height: 470px;
   }
 }
