@@ -7,7 +7,7 @@ import { Estudio } from '../models/estudio';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'portfolio-back.homely-francine.koyeb/educacion/';
+  URL = 'https://homely-francine-saiifly.koyeb.app/educacion/';
 
   constructor(private httpClient : HttpClient) { }
 

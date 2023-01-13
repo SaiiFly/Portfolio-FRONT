@@ -10,7 +10,7 @@ import { LoginUsuario } from '../models/login-usuario';
 export class AuthService {
 
   /* URL = environment.URL + 'auth/'; */
-  URL = "portfolio-back.homely-francine.koyeb/auth/"
+  URL = "https://homely-francine-saiifly.koyeb.app/auth/"
 
   constructor(private httpClient: HttpClient) { }
 

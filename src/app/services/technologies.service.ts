@@ -7,7 +7,7 @@ import { Tech } from '../models/tech';
   providedIn: 'root'
 })
 export class TechnologiesService {
-  URL = 'portfolio-back.homely-francine.koyeb/technologies/';
+  URL = 'https://homely-francine-saiifly.koyeb.app/technologies/';
   
   constructor(private httpClient: HttpClient) { }
 
