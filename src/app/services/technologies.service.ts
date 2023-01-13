@@ -7,7 +7,7 @@ import { Tech } from '../models/tech';
   providedIn: 'root'
 })
 export class TechnologiesService {
-  URL = 'https://portflioback.herokuapp.com/technologies/';
+  URL = 'portfolio-back.homely-francine.koyeb/technologies/';
   
   constructor(private httpClient: HttpClient) { }
 

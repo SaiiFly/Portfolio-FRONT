@@ -7,7 +7,7 @@ import { Proyecto } from '../models/proyecto';
   providedIn: 'root'
 })
 export class ProyectosService {
-  URL = 'https://portflioback.herokuapp.com/proyectos/';
+  URL = 'portfolio-back.homely-francine.koyeb/proyectos/';
 
   constructor(private httpClient: HttpClient) { }
 

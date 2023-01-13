@@ -7,7 +7,7 @@ import { Estudio } from '../models/estudio';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'https://portflioback.herokuapp.com/educacion/';
+  URL = 'portfolio-back.homely-francine.koyeb/educacion/';
 
   constructor(private httpClient : HttpClient) { }
 
