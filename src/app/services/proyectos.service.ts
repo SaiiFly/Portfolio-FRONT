@@ -7,7 +7,7 @@ import { Proyecto } from '../models/proyecto';
   providedIn: 'root'
 })
 export class ProyectosService {
-  URL = 'https://homely-francine-saiifly.koyeb.app/proyectos/';
+  URL = 'https://portfolio-back-argentinaprograma.onrender.com/proyectos/';
 
   constructor(private httpClient: HttpClient) { }
 

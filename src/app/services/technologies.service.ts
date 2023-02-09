@@ -7,7 +7,7 @@ import { Tech } from '../models/tech';
   providedIn: 'root'
 })
 export class TechnologiesService {
-  URL = 'https://homely-francine-saiifly.koyeb.app/technologies/';
+  URL = 'https://portfolio-back-argentinaprograma.onrender.com/technologies/';
   
   constructor(private httpClient: HttpClient) { }
 
